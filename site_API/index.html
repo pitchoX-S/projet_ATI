@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Énergie à l'École</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.10/css/weather-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Suivi de la Consommation Énergétique</h1>
+    </header>
+    <main>
+        <section id="realtime">
+            <h2>Consommation en Temps Réel</h2>
+            <div id="currentConsumption">500 kWh</div>
+            <div>Objectif Quotidien : <span id="dailyGoal">450 kWh</span></div>
+            <div>Progression : <span id="progress">110%</span></div>
+        </section>
+        <section id="charts">
+            <h2 id="chartTitle">Évolution de la Consommation</h2>
+            <canvas id="consumptionChart"></canvas>
+            <div id="loadingBarContainer">
+                <div id="loadingBar"></div>
+                <div id="loadingPercentage" style="position: absolute; right: 10px; top: 5px; color: black;">0% du taux de consommation optimal</div>
+            </div>
+        </section>
+        <section id="photo" style="display:none;">
+            <img src="04_compteurs.PNG" alt="Compteurs" style="width: 100%;">
+        </section>
+        <section id="weather" style="display:none;">
+            <h2>Météo Actuelle</h2>
+            <div id="weatherInfo"></div>
+        </section>
+        <section id="impact">
+            <h2>Impact Écologique</h2>
+            <div>CO2 Économisé : <span id="co2Saved">200 kg</span></div>
+            <div>Équivalent en arbres plantés : <span id="treesPlanted">10 arbres</span></div>
+        </section>
+        <section id="tips">
+            <h2>Conseils pour Économiser l'Énergie</h2>
+            <ul>
+                <li>Éteignez les lumières en quittant une pièce !</li>
+                <li>Débranchez vos appareils lorsque non utilisés !</li>
+            </ul>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
