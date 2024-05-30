@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Titre de la page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="Logo de l'école" class="logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="consommation.html" class="current-page">Consommation des Bâtiments</a></li>
+                <li><a href="couts.html">Coûts</a></li>
+                <li><a href="sensibilisation.html">Sensibilisation</a></li>
+                <li><a href="apropos.html">À Propos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>MQTT Messages</h1>
+        <p id="puissance-ordinateur">Puissance de l'ordinateur numéro 02: <span id="puissance-ordinateur"></span> kW</p>
+        <p id="temperature-salle">Température de la salle 206: <span id="temperature-salle"></span> °C</p>
+        <p id="puissance-ecran">Puissance de l'écran de l'ordinateur numéro 02: <span id="puissance-ecran"></span> kW</p>
+
+        <!-- Inclure la bibliothèque MQTT.js -->
+        <script src="https://unpkg.com/mqtt/dist/mqtt.min.js"></script>
+        <!-- Inclure votre fichier JavaScript -->
+        <script src="mqtt.js"></script>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Sensibilisation à la Consommation Énergétique</p>
+    </footer>
+</body>
+</html>
